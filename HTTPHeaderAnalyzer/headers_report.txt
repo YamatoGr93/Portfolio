@@ -1,0 +1,9 @@
+Missing: Content-Security-Policy
+Recommendation: Add a CSP header to control resources that the browser is allowed to load, mitigating XSS attacks.
+
+Missing: Strict-Transport-Security
+Recommendation: Add an HSTS header to enforce HTTPS and protect against protocol downgrade attacks.
+
+Missing: Referrer-Policy
+Recommendation: Add this header to control how much referrer information is shared with other sites.
+

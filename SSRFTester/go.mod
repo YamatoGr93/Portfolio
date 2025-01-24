@@ -1,0 +1,3 @@
+module SSRFTester
+
+go 1.21.0
