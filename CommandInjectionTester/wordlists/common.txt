@@ -1,0 +1,1 @@
+test\nping\nid\nls\nwhoami
