@@ -1,18 +1,17 @@
 # **YamatoGr93 Portfolio**
 
-Welcome to my cybersecurity portfolio! This repository showcases a collection of penetration testing tools I developed using Go. Each tool is designed to target specific vulnerabilities or assist with security testing workflows. This project highlights my development skills, understanding of vulnerabilities, and practical testing experience with OWASP Juice Shop.
+Welcome to my Go Developer portfolio! This repository showcases a diverse collection of projects I have developed using the Go programming language. These projects reflect my expertise in cybersecurity, software development, and automation. Each project is designed to solve specific problems, ranging from penetration testing tools to utility applications, and demonstrates my ability to create efficient, modular, and practical solutions.
 
 ---
 
 ## **Table of Contents**
 
 1. [Overview](#overview)
-2. [Tools Included](#tools-included)
-3. [Testing Environment](#testing-environment)
-4. [Highlights](#highlights)
-5. [Installation](#installation)
-6. [Usage Examples](#usage-examples)
-7. [License](#license)
+2. [Projects Included](#projects-included)
+3. [Highlights](#highlights)
+4. [Installation](#installation)
+5. [Usage Examples](#usage-examples)
+6. [License](#license)
 
 ---
 
@@ -20,160 +19,129 @@ Welcome to my cybersecurity portfolio! This repository showcases a collection of
 
 This portfolio demonstrates my ability to:
 
-- Design and implement custom penetration testing tools in Go.
-- Detect and analyze vulnerabilities such as XSS, SQLi, SSRF, Open Redirect, and more.
-- Automate repetitive tasks in bug bounty hunting and penetration testing workflows.
-- Generate structured vulnerability reports.
+- Design and implement custom tools and applications using Go.
+- Solve complex problems in cybersecurity, automation, and software development.
+- Develop modular and efficient code with multithreading and performance optimization.
+- Automate repetitive tasks and improve workflows.
+- Generate structured reports for professional use.
 
-Each tool is accompanied by detailed documentation in its respective subdirectory, covering usage, features, and output examples.
-
----
-
-## **Tools Included**
-
-### 1. **Command Injection Tester**
-- **Purpose**: Identifies potential command injection vulnerabilities by testing crafted payloads.
-- **Key Features**: Custom wordlists, result filtering, and automated testing.
-- **Result Example**:
-  ```plaintext
-  [POTENTIAL COMMAND INJECTION] Payload: && ls -la
-  ```
-
-### 2. **Directory Bruteforcer**
-- **Purpose**: Finds hidden directories and files through brute-forcing.
-- **Key Features**: Multithreaded scanning, status code filtering, and custom wordlist support.
-- **Result Example**:
-  ```plaintext
-  [FOUND] http://localhost:3000/admin (403)
-  ```
-
-### 3. **HTTP Header Analyzer**
-- **Purpose**: Analyzes HTTP response headers for missing security configurations.
-- **Key Features**: Checks for CSP, HSTS, and more. Provides actionable recommendations.
-- **Result Example**:
-  ```plaintext
-  Missing: Content-Security-Policy
-  Recommendation: Add a CSP header to mitigate XSS attacks.
-  ```
-
-### 4. **Open Redirect Finder**
-- **Purpose**: Identifies open redirect vulnerabilities by testing common redirect parameters.
-- **Key Features**: Supports custom wordlists and payloads.
-- **Result Example**:
-  ```plaintext
-  [POTENTIAL OPEN REDIRECT] URL: http://localhost:3000?redirect=https://evil.com
-  ```
-
-### 5. **Parameter Discovery Tool**
-- **Purpose**: Discovers hidden parameters in web applications.
-- **Key Features**: Brute-forces parameters using a wordlist and identifies unused ones.
-- **Result Example**:
-  ```plaintext
-  [FOUND] Parameter: debug=true
-  ```
-
-### 6. **SSRF Tester**
-- **Purpose**: Tests for Server-Side Request Forgery vulnerabilities.
-- **Key Features**: Leverages common SSRF payloads to detect potential issues.
-- **Result Example**:
-  ```plaintext
-  [POTENTIAL SSRF] URL: http://localhost:3000?url=http://169.254.169.254/
-  ```
-
-### 7. **Subdomain Enumerator**
-- **Purpose**: Discovers valid subdomains of a target domain via DNS brute-forcing.
-- **Key Features**: Custom wordlist support, multithreading, and result saving.
-- **Result Example**:
-  ```plaintext
-  [FOUND] subdomain: api.example.com
-  ```
-
-### 8. **XSS Payload Generator**
-- **Purpose**: Generates custom and encoded XSS payloads for testing.
-- **Key Features**: Predefined payloads, multiple encoding options, and custom payload support.
-- **Result Example**:
-  ```plaintext
-  <script>alert('XSS')</script>
-  ```
-
-### 9. **CSRF Token Extractor**
-- **Purpose**: Extracts CSRF tokens from web pages for testing.
-- **Key Features**: Regex-based token extraction and results saving.
-- **Result Example**:
-  ```plaintext
-  Extracted CSRF Tokens:
-  abc123xyz
-  ```
-
-### 10. **Vulnerability Report Generator**
-- **Purpose**: Compiles structured vulnerability reports in Markdown format.
-- **Key Features**: Converts JSON-based findings into professional reports.
-- **Result Example**:
-  ```markdown
-  ### Cross-Site Scripting (XSS)
-  **Severity:** Medium
-  **Description:** User input is not sanitized on the comment form.
-  ```
+Each project includes detailed documentation in its respective subdirectory, covering usage instructions, features, and examples.
 
 ---
 
-## **Testing Environment**
+## **Projects Included**
 
-- **Target Application**: [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)
-  - Dockerized instance running at: `http://localhost:3000`
-  - **Command to Start**:
-    ```bash
-    docker run -d -p 3000:3000 bkimminich/juice-shop
-    ```
+### **Cybersecurity Tools**
+1. **Command Injection Tester**
+   - Identifies potential command injection vulnerabilities by testing crafted payloads.
+   - Features: Custom wordlists, result filtering, automated testing.
+
+2. **Directory Bruteforcer**
+   - Finds hidden directories and files through brute-forcing.
+   - Features: Multithreaded scanning, status code filtering, custom wordlist support.
+
+3. **HTTP Header Analyzer**
+   - Analyzes HTTP response headers for missing security configurations.
+   - Features: Checks for CSP, HSTS, etc., with actionable recommendations.
+
+4. **Open Redirect Finder**
+   - Detects open redirect vulnerabilities by testing common redirect parameters.
+   - Features: Custom wordlists and payloads.
+
+5. **Parameter Discovery Tool**
+   - Discovers hidden parameters in web applications.
+   - Features: Brute-forces parameters using a wordlist and identifies unused ones.
+
+6. **SSRF Tester**
+   - Tests for Server-Side Request Forgery vulnerabilities using common payloads.
+
+7. **Subdomain Enumerator**
+   - Discovers valid subdomains of a target domain via DNS brute-forcing.
+   - Features: Multithreading, custom wordlist support.
+
+8. **XSS Payload Generator**
+   - Generates custom and encoded XSS payloads for testing purposes.
+
+9. **CSRF Token Extractor**
+   - Extracts CSRF tokens from web pages using regex-based extraction.
+
+10. **Vulnerability Report Generator**
+    - Converts JSON-based findings into structured Markdown vulnerability reports.
+
+---
+
+### **Utility Applications**
+1. **Automated Backup System**
+   - Automates file backups with scheduling options for data safety.
+
+2. **File System Organizer**
+   - Organizes files in directories based on extensions or custom rules.
+
+3. **Password Generator**
+   - Creates secure passwords with customizable length and complexity.
+
+4. **Text Search Tool**
+   - Searches for specific text patterns across files in a directory.
+
+5. **URL Shortener CLI**
+   - A command-line tool to create short URLs for long links.
+
+6. **Task Manager CLI**
+   - A simple CLI-based task manager to track daily tasks efficiently.
+
+7. **System Resource Monitor**
+   - Monitors system resources such as CPU usage, memory usage, etc., in real-time.
+
+8. **Data Parser**
+   - Parses and extracts data from various formats (e.g., JSON, XML).
+
+9. **Simple Chatbot**
+   - A basic chatbot application that responds to user inputs interactively.
 
 ---
 
 ## **Highlights**
 
-- **Total Tools Developed**: 10
-- **Technologies Used**: Go, Docker, OWASP Juice Shop.
+- **Total Projects Developed**: 19
+- **Technologies Used**: Go programming language.
 - **Key Skills Demonstrated**:
-  - Vulnerability analysis and exploitation.
+  - Cybersecurity expertise (vulnerability analysis and exploitation).
   - Efficient multithreading and performance optimization.
-  - Clean and modular coding practices.
-  - Report generation for professional penetration testing.
+  - Automation of repetitive tasks.
+  - Clean coding practices with modular design.
+  - Professional report generation for penetration testing or other purposes.
 
 ---
 
 ## **Installation**
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/YamatoGr93/Portfolio.git
-   cd Portfolio
-   ```
+  git clone https://github.com/YamatoGr93/Portfolio.git
+  cd Portfolio
 
-2. Navigate to any tool's directory and build it:
-   ```bash
-   cd ToolName
-   go build -o tool-binary main.go
-   ```
 
-3. Run the tool using the appropriate flags (refer to individual tool documentation).
+2. Navigate to any project's directory and build it:
+  cd ProjectName
+  go build -o project-binary main.go
+
+3. Run the project using the appropriate flags (refer to individual project documentation).
 
 ---
 
 ## **Usage Examples**
 
 ### Example 1: SSRF Tester
-```bash
-go run main.go -url http://localhost:3000 -param url -o ssrf_results.txt
-```
+  go run main.go -url http://localhost:3000 -param url -o ssrf_results.txt
 
-### Example 2: Vulnerability Report Generator
-```bash
-go run main.go -i report.json -o vulnerability_report.md
-```
 
-### Example 3: Directory Bruteforcer
-```bash
-go run main.go http://localhost:3000 -w wordlists/common.txt -t 20 -o results.txt
-```
+### Example 2: File System Organizer
+  go run main.go --source /path/to/source --destination /path/to/destination 
+
+
+### Example 3: Password Generator
+   go run main.go --length 16 --special-chars true --output password.txt 
+
+
 
 ---
 
@@ -185,5 +153,6 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## **Acknowledgments**
 
-- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/) for providing a safe testing environment.
-- Built with Go to showcase development and cybersecurity expertise.
+- Inspired by real-world challenges in cybersecurity and software development.
+- Special thanks to [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/) for providing a safe environment for testing security tools.
+- Built entirely with Go to showcase my development skills and problem-solving abilities.
